@@ -37,11 +37,12 @@
          <el-form-item label="登录时间" style="width: 308px">
             <el-date-picker
                v-model="dateRange"
-               value-format="YYYY-MM-DD"
+               value-format="YYYY-MM-DD HH:mm:ss"
                type="daterange"
                range-separator="-"
                start-placeholder="开始日期"
                end-placeholder="结束日期"
+               :default-time="[new Date(2000, 1, 1, 0, 0, 0), new Date(2000, 1, 1, 23, 59, 59)]"
             ></el-date-picker>
          </el-form-item>
          <el-form-item>
@@ -101,7 +102,7 @@
                <dict-tag :options="sys_common_status" :value="scope.row.status" />
             </template>
          </el-table-column>
-         <el-table-column label="描述" align="center" prop="msg" />
+         <el-table-column label="描述" align="center" prop="msg" :show-overflow-tooltip="true" />
          <el-table-column label="访问时间" align="center" prop="accessTime" sortable="custom" :sort-orders="['descending', 'ascending']" width="180">
             <template #default="scope">
                <span>{{ parseTime(scope.row.accessTime) }}</span>
@@ -134,7 +135,7 @@ const multiple = ref(true);
 const selectName = ref("");
 const total = ref(0);
 const dateRange = ref([]);
-const defaultSort = ref({ prop: "loginTime", order: "descending" });
+const defaultSort = ref({ prop: "accessTime", order: "descending" });
 
 // 查询参数
 const queryParams = ref({
@@ -165,8 +166,8 @@ function handleQuery() {
 function resetQuery() {
   dateRange.value = [];
   proxy.resetForm("queryRef");
+  queryParams.value.pageNum = 1;
   proxy.$refs["logininforRef"].sort(defaultSort.value.prop, defaultSort.value.order);
-  handleQuery();
 }
 /** 多选框选中数据 */
 function handleSelectionChange(selection) {

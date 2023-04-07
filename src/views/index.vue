@@ -118,10 +118,12 @@
               >
             </p>
             <p>
-              <i class="el-icon-user-solid"></i> QQ群：<s>满42799195</s> <s>满170157040</s>
-              <s>满130643120</s> <s>满225920371</s> <s>满201705537</s> <s>满236543183</s>
-              <s>满213618602</s> <a href="https://jq.qq.com/?_wv=1027&k=kiU5WDls" target="_blank">
-                148794840</a
+              <i class="el-icon-user-solid"></i> QQ群：<s>满42799195</s>
+              <s>满170157040</s> <s>满130643120</s> <s>满225920371</s>
+              <s>满201705537</s> <s>满236543183</s> <s>满213618602</s>
+              <s>满148794840</s> <s>满118752664</s>
+              <a href="https://jq.qq.com/?_wv=1027&k=FqImHgH2" target="_blank"
+                >101038945</a
               >
             </p>
             <p>
@@ -148,6 +150,91 @@
             </div>
           </template>
           <el-collapse accordion>
+            <el-collapse-item title="v3.6.2 - 2022-01-16">
+              <ol>
+                <li>重置时取消部门选中</li>
+                <li>新增返回警告消息提示</li>
+                <li>忽略不必要的属性数据返回</li>
+                <li>修改参数键名时移除前缓存配置</li>
+                <li>开启TopNav没有子菜单隐藏侧边栏</li>
+                <li>删除fuse无效选项maxPatternLength</li>
+                <li>兼容Excel下拉框内容过多无法显示的问题</li>
+                <li>修复文件上传组件格式验证问题</li>
+                <li>修复回显数据字典数组异常问题</li>
+                <li>修复sheet超出最大行数异常问题</li>
+                <li>修复Log注解GET请求记录不到参数问题</li>
+                <li>修复gateway流控规则生效但不显示问题</li>
+                <li>修复主题颜色在Drawer组件不会加载问题</li>
+                <li>修复调度日志点击多次数据不变化的问题</li>
+                <li>修复用户编辑时角色和部门存在无法修改情况</li>
+                <li>修复使用透明底png图片时，自动填充黑色背景</li>
+                <li>修复table中更多按钮切换主题色未生效修复问题</li>
+                <li>修复某些特性的环境生成代码变乱码TXT文件问题</li>
+                <li>修复代码生成图片/文件/单选时选择必填无法校验问题</li>
+                <li>升级spring-cloud到最新版2021.0.5</li>
+                <li>升级spring-boot到最新版本2.7.7</li>
+                <li>升级spring-boot-admin到最新版2.7.10</li>
+                <li>升级kaptcha到最新版2.3.3</li>
+                <li>升级druid到最新版本1.2.15</li>
+                <li>升级fastjson到最新版2.0.22</li>
+                <li>升级pagehelper到最新版1.4.6</li>
+                <li>升级transmittable-thread-local到最新版本2.14.2</li>
+                <li>升级echarts到最新版本5.4.0</li>
+                <li>升级core-js到最新版本3.25.3</li>
+                <li>升级element-ui到最新版本2.15.12</li>
+				<li>移除commons-collections多余的依赖</li>
+                <li>优化弹窗内容过多展示不全问题</li>
+                <li>优化导出对象的子列表为空会出现[]问题</li>
+                <li>优化字符未使用下划线不进行驼峰式处理</li>
+                <li>优化nacos修改xss开关时同步过滤器验证</li>
+                <li>优化修改头像在小屏幕上页面布局错位的问题</li>
+                <li>其他细节优化</li>
+              </ol>
+            </el-collapse-item>
+            <el-collapse-item title="v3.6.1 - 2022-10-01">
+              <ol>
+                <li>数据逻辑删除不进行唯一验证</li>
+                <li>支持多权限字符匹配角色数据权限</li>
+                <li>页面内嵌iframe切换tab不刷新数据</li>
+                <li>新增密码最大错误次数/锁定时间</li>
+                <li>登录日志新增解锁账户功能</li>
+                <li>通用下载方法新增config配置选项</li>
+                <li>操作日志记录支持排除敏感属性字段</li>
+                <li>Excel注解支持导出对象的子列表方法</li>
+                <li>Excel注解支持自定义隐藏属性列</li>
+                <li>Excel注解支持backgroundColor属性设置背景色</li>
+                <li>升级spring-cloud-alibaba到最新版2021.0.4.0</li>
+                <li>升级spring-cloud到最新版2021.0.4</li>
+                <li>升级spring-boot到最新版本2.7.3</li>
+                <li>升级spring-boot-admin到最新版2.7.5</li>
+                <li>升级seata到最新版1.5.2</li>
+                <li>升级druid到最新版本1.2.12</li>
+                <li>升级fastjson到最新版2.0.14</li>
+                <li>升级pagehelper到最新版1.4.5</li>
+                <li>升级core-js到最新版本3.25.2</li>
+                <li>升级dynamic-ds到最新版本3.5.2</li>
+                <li>升级element-ui到最新版本2.15.10</li>
+                <li>修复多文件上传报错出现的异常问题</li>
+                <li>修复图片预览组件src属性为null值控制台报错问题</li>
+                <li>修复使用FastDFS上传头像失败提示文件名没有后缀问题</li>
+                <li>优化seata单独依赖模块</li>
+                <li>优化任务过期不执行调度</li>
+                <li>优化字典数据使用store存取</li>
+                <li>优化代码生成同步后值NULL问题</li>
+                <li>优化定时任务支持执行父类方法</li>
+                <li>优化修改资料头像被覆盖的问题</li>
+                <li>优化修改用户登录账号重复验证</li>
+                <li>优化用户个人信息接口防止修改部门</li>
+                <li>优化布局设置使用el-drawer抽屉显示</li>
+                <li>优化日志注解记录限制请求地址的长度</li>
+                <li>优化导入更新用户数据前校验数据权限</li>
+                <li>优化excel/scale属性导出单元格数值类型</li>
+                <li>优化日志操作中重置按钮时重复查询的问题</li>
+                <li>优化多个相同角色数据导致权限SQL重复问题</li>
+                <li>优化表格上右侧工具条（搜索按钮显隐&右侧样式凸出）</li>
+                <li>其他细节优化</li>
+              </ol>
+            </el-collapse-item>
             <el-collapse-item title="v3.6.0 - 2022-07-16">
               <ol>
                 <li>Excel注解支持color字体颜色</li>
@@ -753,7 +840,7 @@
 </template>
 
 <script setup name="Index">
-const version = ref('3.6.0')
+const version = ref('3.6.2')
 
 function goTarget(url) {
   window.open(url, '__blank')
